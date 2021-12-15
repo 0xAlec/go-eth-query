@@ -16,7 +16,7 @@ import (
 )
 
 const fwb = "0x35bd01fc9d6d5d81ca9e055db88dc49aa2c699a8"
-const fiftyk = "0x15d09449fadd279d65a43c49980cd3992c92cb49"
+const addr = "0x15d09449fadd279d65a43c49980cd3992c92cb49"
 
 func main() {
 	err := godotenv.Load()
@@ -35,7 +35,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	userAddr := common.HexToAddress(fiftyk)
+	userAddr := common.HexToAddress(addr)
 
 	bal, err := instance.BalanceOf(&bind.CallOpts{}, userAddr)
 	if err != nil {
